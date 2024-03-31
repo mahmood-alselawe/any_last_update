@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: serviceA
+  config:
+    import: optional:configserver:http://locahost:8088
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/ # URL of the Eureka server
+
+server:
+  port: 8082
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
